@@ -11,3 +11,16 @@ const max = function (array) {
 };
 max(array);
 //new comment
+//to sort an  array using bubble sort
+
+function bubblesort(arr) {
+  for (let j = 0; j < arr.length - 1; j++) {
+    for (let i = 0; i < arr.length - j - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+      }
+    }
+  }
+  console.log(arr);
+}
+bubblesort([1, 24, 3, 864, 99]);
