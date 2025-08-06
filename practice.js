@@ -24,3 +24,8 @@ function bubblesort(arr) {
   console.log(arr);
 }
 bubblesort([1, 24, 3, 864, 99]);
+
+const names = ["satyam", "shubham", "satyam"];
+const uniqueNames = new Set(names);
+const setNames = new Set(["tanu", "manu", "tanu"]);
+console.log(uniqueNames, setNames);
