@@ -10,3 +10,4 @@ const max = function (array) {
   console.log(`max is ${currmax}`);
 };
 max(array);
+//new comment
