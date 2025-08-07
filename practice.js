@@ -37,3 +37,7 @@ const newMap = new Map([
 ]);
 
 console.log(newMap.has("shubham"));
+
+//to reverse an array
+const revarr = array.reverse();
+console.log(revarr);
