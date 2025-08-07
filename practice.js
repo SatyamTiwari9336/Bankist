@@ -29,3 +29,11 @@ const names = ["satyam", "shubham", "satyam"];
 const uniqueNames = new Set(names);
 const setNames = new Set(["tanu", "manu", "tanu"]);
 console.log(uniqueNames, setNames);
+
+const newMap = new Map([
+  ["satyam", "value"],
+  ["shubham", "index"],
+  [1, true],
+]);
+
+console.log(newMap);
