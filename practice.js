@@ -36,4 +36,4 @@ const newMap = new Map([
   [1, true],
 ]);
 
-console.log(newMap);
+console.log(newMap.has("shubham"));
