@@ -44,10 +44,8 @@ const revarr = array.reverse();
 console.log(revarr);
 
 //to reverse an array by DSA
-let arr = [2, 3, 5, 6];
-for (let i = 0; i < arr.length - 1; i++) {
-  for (let j = arr.length - 1; j > 0; j--) {
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
+let arr = [2, 3, 5, 6, 12, 1, 4, 5, 2];
+for (let i = 0; i < arr.length / 2; i++) {
+  [arr[i], arr[arr.length - i - 1]] = [arr[arr.length - i - 1], arr[i]];
 }
 console.log(arr);
