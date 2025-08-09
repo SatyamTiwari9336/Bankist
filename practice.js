@@ -66,7 +66,7 @@ for (let i = 0; i <= arr2.length - 1; i++) {
 console.log(`maximum  is ${maxi}, minimum is  ${min}`);
 
 //find the missing element from a series of number in array
-let arr3 = [1, 2, 3, 4, 6, 7, 8];
+let arr3 = [2, 3, 4, 1, 8, 6, 7];
 let sum = 0;
 sum = arr3.reduce((acc, el) => acc + el);
 let n = arr3.length + 1;
