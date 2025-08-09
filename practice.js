@@ -51,3 +51,16 @@ for (let i = 0; i < arr1.length / 2; i++) {
 console.log(arr1);
 
 // find minimum and maximum of array using minimum number of comparisons
+let arr2 = [1, 4, 6, -2, 16, 3];
+let maxi = 0;
+let min = arr2[0];
+for (let i = 0; i <= arr2.length - 1; i++) {
+  if (arr2[i] > maxi) {
+    maxi = arr2[i];
+  }
+  if (arr2[i] < min) {
+    min = arr2[i];
+  }
+}
+
+console.log(`maximum  is ${maxi}, minimum is  ${min}`);
