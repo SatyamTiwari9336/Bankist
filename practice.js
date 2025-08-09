@@ -73,3 +73,20 @@ let n = arr3.length + 1;
 const expectedsum = (n * (n + 1)) / 2;
 const missingElement = expectedsum - sum;
 console.log(missingElement);
+
+//merging to arrays after sorting
+let sorting = function (ar) {
+  for (let i = 0; i < ar.length - 1; i++) {
+    for (let j = 0; j < ar.length - i - 1; j++) {
+      if (ar[j] > ar[j + 1]) {
+        [ar[j], ar[j + 1]] = [ar[j + 1], ar[j]];
+      }
+    }
+  }
+  return ar;
+};
+let arr4 = [2, 6, 5, 6];
+let arr5 = [2, 6, 89, 0];
+
+let arr6 = arr4.concat(arr5);
+console.log(sorting(arr6));
