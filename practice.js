@@ -42,3 +42,12 @@ console.log(newMap.has("shubham"));
 //to reverse an array
 const revarr = array.reverse();
 console.log(revarr);
+
+//to reverse an array by DSA
+let arr = [2, 3, 5, 6];
+for (let i = 0; i < arr.length; i++) {
+  for (let j = arr.length; j > 0; j--) {
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+console.log(arr);
