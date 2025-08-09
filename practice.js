@@ -44,8 +44,10 @@ const revarr = array.reverse();
 console.log(revarr);
 
 //to reverse an array by DSA
-let arr = [2, 3, 5, 6, 12, 1, 4, 5, 2];
-for (let i = 0; i < arr.length / 2; i++) {
-  [arr[i], arr[arr.length - i - 1]] = [arr[arr.length - i - 1], arr[i]];
+let arr1 = [2, 3, 5, 6, 12, 1, 4, 5, 2];
+for (let i = 0; i < arr1.length / 2; i++) {
+  [arr1[i], arr1[arr1.length - i - 1]] = [arr1[arr1.length - i - 1], arr1[i]];
 }
-console.log(arr);
+console.log(arr1);
+
+// find minimum and maximum of array using minimum number of comparisons
