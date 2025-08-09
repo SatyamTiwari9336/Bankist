@@ -90,3 +90,34 @@ let arr5 = [2, 6, 89, 0];
 
 let arr6 = arr4.concat(arr5);
 console.log(sorting(arr6));
+
+// joining two arrays after sorting in js without concat
+let a1 = [1, 2, 5, 5, 5];
+let a2 = [1, 4, 6, 8];
+let a3 = [];
+let i,
+  j = 0;
+
+while (i < a1.length && j < a2.length) {
+  if (a1[i] < a2[j]) {
+    a3.push(a1[i]);
+    i++;
+  } else {
+    a3.push(a2[j]);
+    j++;
+  }
+}
+
+// Add remaining elements from a1
+while (i < a1.length) {
+  a3.push(a1[i]);
+  i++;
+}
+
+// Add remaining elements from a2
+while (j < a2.length) {
+  a3.push(a2[j]);
+  j++;
+}
+
+console.log(a3); // [1, 1, 2, 4, 5, 5, 5, 6, 8]
