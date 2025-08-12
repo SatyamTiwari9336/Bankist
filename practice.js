@@ -158,3 +158,33 @@ for (let i = 0; i < rows; i++) {
 }
 
 console.log(matrix1);
+
+//transpose a matrix
+//using initial matrix
+
+console.log("Original Matrix:");
+for (let i = 0; i < matrix.length; i++) {
+  console.log(matrix[i]);
+}
+
+// Step 2: Transpose using loops
+let rows1 = matrix.length;
+let cols1 = matrix[0].length;
+let transpose = [];
+
+// Initialize transpose matrix
+for (let i = 0; i < cols1; i++) {
+  transpose[i] = []; // create a new row
+}
+
+// Fill transpose
+for (let i = 0; i < rows1; i++) {
+  for (let j = 0; j < cols1; j++) {
+    transpose[j][i] = matrix[i][j];
+  }
+}
+
+console.log("Transposed Matrix:");
+for (let i = 0; i < transpose.length; i++) {
+  console.log(transpose[i]);
+}
