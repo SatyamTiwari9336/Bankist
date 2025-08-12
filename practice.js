@@ -136,3 +136,25 @@ for (let i = 0; i <= 5; i++) {
   }
   console.log(str);
 }
+
+//create a matrix
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+console.log(matrix);
+
+//create matrix way 2
+let rows = 3;
+let cols = 4;
+let matrix1 = [];
+
+for (let i = 0; i < rows; i++) {
+  matrix1[i] = []; // create each row
+  for (let j = 0; j < cols; j++) {
+    matrix1[i][j] = 0; // fill with zeros
+  }
+}
+
+console.log(matrix1);
