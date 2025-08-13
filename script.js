@@ -528,6 +528,7 @@ YOUR TASKS:
 BONUS: What's the average weight of the heaviest breed that likes to fetch? HINT: Use the "Math.max" method along with the ... operator.
 
 TEST DATA:
+]; */
 
 const breeds = [
   {
@@ -565,4 +566,9 @@ const breeds = [
     averageWeight: 18,
     activities: ['agility', 'fetch'],
   },
-]; */
+];
+//solutions
+//1.
+const huskyWeight = breeds.find(br => (br.breed = 'Husky')).averageWeight;
+console.log(huskyWeight);
+//2.
