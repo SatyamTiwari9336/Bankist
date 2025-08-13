@@ -583,3 +583,5 @@ console.log(allActivities);
 //4.
 const uniqueActivities = new Set([...allActivities]);
 console.log(uniqueActivities);
+//5.
+const swimmingAdjacent = breeds.filter();
