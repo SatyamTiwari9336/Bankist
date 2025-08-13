@@ -444,3 +444,12 @@ console.log(account);
 
 //the find index method
 //to delete an element from the array we use splice method which takes the index of element to be deleted array.splice(index_in_array,how_many);
+
+//findLast method is used to find element that is last in array to satisfy this condition
+console.log(movements);
+const lastel = movements.findLast(mov => mov < 0);
+const lastelindex = movements.findLastIndex(mov => mov < 0);
+console.log(lastel);
+console.log(lastelindex);
+
+//findLastIndex method is used to find index of the last element that satisfies the condition
