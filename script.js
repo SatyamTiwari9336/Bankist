@@ -200,6 +200,18 @@ btnClose.addEventListener('click', function (e) {
   }
   inputClosePin.value = inputCloseUsername.value = '';
 });
+
+// loan asking feature ⬇️⬇️
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    //add amount
+    currentAccount.movements.push(amount);
+    updateUI(currentAccount);
+  }
+  inputLoanAmount.value = '';
+});
 ///////////////////////////////////////////////
 //////////////////////////////////////////////
 // LECTURES
@@ -452,10 +464,11 @@ console.log(lastel);
 console.log(lastelindex);
 
 //findLastIndex method is used to find index of the last element that satisfies the condition
-*/
 
 //some method
 //return true if any of the element satisfies the condition
 const valuegreaterthan = movements.some(mov => mov > 1500);
 console.log(valuegreaterthan);
 console.log(movements.includes(3000));
+*/
+//every method only returns true when all elements are true for the condition
