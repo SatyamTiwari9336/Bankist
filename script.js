@@ -572,3 +572,7 @@ const breeds = [
 const huskyWeight = breeds.find(br => (br.breed = 'Husky')).averageWeight;
 console.log(huskyWeight);
 //2.
+const dogBothActivities = breeds.find(el =>
+  el.activities.find(el => el == 'running' && 'fetch')
+).breed;
+console.log(`dogBothactivities is ${dogBothActivities}`);
