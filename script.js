@@ -470,5 +470,26 @@ console.log(lastelindex);
 const valuegreaterthan = movements.some(mov => mov > 1500);
 console.log(valuegreaterthan);
 console.log(movements.includes(3000));
-*/
 //every method only returns true when all elements are true for the condition
+console.log(account4.movements.every(mov => mov > 0)); //all movements are positive
+console.log(account1.movements.every(mov => mov > 0)); //all movements are negative
+
+//seperate callback
+const deposits = mov => mov > 0;
+console.log(movements.some(deposits));
+console.log(movements.every(deposits));
+console.log(movements.filter(deposits));
+
+// to check if an element in array is also n array
+let arr = [1, 2, 3, [2, 3, 4]];
+console.log(Array.isArray(arr[3]));
+console.log(Array.isArray(arr[2]));
+*/
+//array flatning
+const arr = [[1, 2, 3], [4, 5, 3], 7, 8];
+console.log(arr.flat());
+const arrDeep = [[1, [3, 2, [3482], 8], 3], [4, [2, 6, 7], 5, 3], [7, 2, 5], 8];
+console.log(arrDeep.flat(2));
+console.log(arrDeep.flat(3));
+const arrnew = [1, 2, 3, [4, 3, [1, 2, 3]]];
+console.log(arrnew.flat(5));
