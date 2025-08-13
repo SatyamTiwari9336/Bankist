@@ -576,3 +576,10 @@ const dogBothActivities = breeds.find(el =>
   el.activities.find(el => el == 'running' && 'fetch')
 ).breed;
 console.log(`dogBothactivities is ${dogBothActivities}`);
+
+//3.
+const allActivities = breeds.flatMap(el => el.activities);
+console.log(allActivities);
+//4.
+const uniqueActivities = new Set([...allActivities]);
+console.log(uniqueActivities);
