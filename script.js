@@ -133,6 +133,8 @@ const updateUI = function (acc) {
   //Display summary
   calcDisplaySummary(acc);
 };
+
+//Event handlers
 //create login event handler ⬇️⬇️
 let currentAccount;
 btnLogin.addEventListener('click', function (e) {
@@ -177,6 +179,24 @@ btnTransfer.addEventListener('click', function (e) {
     recieverAcc.movements.push(amount);
 
     updateUI(currentAccount);
+  }
+});
+
+btnClose.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (
+    inputCloseUsername.value === currentAccount.username &&
+    Number(inputClosePin.value) === currentAccount.pin
+  ) {
+    const index = accounts.findIndex(
+      acc => acc.username === inputCloseUsername.value
+    );
+    // console.log(index);
+    //delete account
+    accounts.splice(index, 1);
+
+    //hide ui
+    containerApp.style.opacity = 0;
   }
 });
 ///////////////////////////////////////////////
@@ -420,3 +440,6 @@ console.log(a);
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
 */
+
+//the find index method
+//to delete an element from the array we use splice method which takes the index of element to be deleted array.splice(index_in_array,how_many);
