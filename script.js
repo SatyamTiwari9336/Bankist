@@ -440,7 +440,6 @@ console.log(a);
 
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
-*/
 
 //the find index method
 //to delete an element from the array we use splice method which takes the index of element to be deleted array.splice(index_in_array,how_many);
@@ -453,3 +452,10 @@ console.log(lastel);
 console.log(lastelindex);
 
 //findLastIndex method is used to find index of the last element that satisfies the condition
+*/
+
+//some method
+//return true if any of the element satisfies the condition
+const valuegreaterthan = movements.some(mov => mov > 1500);
+console.log(valuegreaterthan);
+console.log(movements.includes(3000));
