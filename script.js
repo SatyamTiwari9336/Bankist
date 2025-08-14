@@ -528,7 +528,7 @@ YOUR TASKS:
 BONUS: What's the average weight of the heaviest breed that likes to fetch? HINT: Use the "Math.max" method along with the ... operator.
 
 TEST DATA:
-]; */
+]; 
 
 const breeds = [
   {
@@ -609,3 +609,13 @@ const fetchweights = breeds
 console.log(fetchweights);
 const highestweight = Math.max(...fetchweights);
 console.log(highestweight);
+/////////////////////////////////////////////////////
+//sorting in js using Sort
+const owners = ['satyam', 'aditya', 'gavesh', 'shubham'];
+owners.sort();
+console.log(owners);
+//sort () mutates the array forever and it works as making all data strings
+const arr1 = [5, 2, 6, 4];
+console.log(arr1.sort((a, b) => a - b));
+console.log(arr1.sort((a, b) => b - a));
+*/
