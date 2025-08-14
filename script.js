@@ -62,10 +62,10 @@ const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
 //⬇️⬇️ THIS IS TO SHOW THE withdraws and deposits of the users
-const diplayMovements = function (movements) {
+const diplayMovements = function (movements, sort = false) {
   containerMovements.innerHTML = '';
-
-  movements.forEach(function (mov, i) {
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
+  movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     const html = `<div class="movements__row">
         <div class="movements__type movements__type--${type}">${i + 1} ${type}
@@ -211,6 +211,12 @@ btnLoan.addEventListener('click', function (e) {
     updateUI(currentAccount);
   }
   inputLoanAmount.value = '';
+});
+let sorted = false;
+btnSort.addEventListener('click', function (e) {
+  e.preventDefault();
+  diplayMovements(currentAccount.movements, !sorted);
+  sorted = !sorted;
 });
 ///////////////////////////////////////////////
 //////////////////////////////////////////////
@@ -619,3 +625,30 @@ const arr1 = [5, 2, 6, 4];
 console.log(arr1.sort((a, b) => a - b));
 console.log(arr1.sort((a, b) => b - a));
 */
+
+//array groupings
+const groupby = Object.groupBy(movements, movement =>
+  movement > 0 ? 'deposits' : 'withadrawal'
+);
+
+console.log(groupby);
+
+const groupedbyactivity = Object.groupBy(accounts, account => {
+  const movementsval = account.movements.length;
+  if (movementsval > 7) {
+    return 'very active';
+  }
+  if (movementsval > 5) {
+    return 'active';
+  }
+  if (movementsval > 2) {
+    return 'moderate';
+  }
+  return 'no use';
+});
+console.log(groupedbyactivity);
+
+const groupedaccounts = Object.groupBy(accounts, account =>
+  account.interestRate > 1 ? 'high' : 'low'
+);
+console.log(groupedaccounts);
