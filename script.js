@@ -624,8 +624,8 @@ console.log(owners);
 const arr1 = [5, 2, 6, 4];
 console.log(arr1.sort((a, b) => a - b));
 console.log(arr1.sort((a, b) => b - a));
-*/
 
+///////////////////////////////
 //array groupings
 const groupby = Object.groupBy(movements, movement =>
   movement > 0 ? 'deposits' : 'withadrawal'
@@ -652,3 +652,29 @@ const groupedaccounts = Object.groupBy(accounts, account =>
   account.interestRate > 1 ? 'high' : 'low'
 );
 console.log(groupedaccounts);
+*/
+/////////////////////////////////////////
+
+//creating empty array
+const arr = new Array(7);
+console.log(arr);
+
+arr.fill(1);
+console.log(arr);
+const x = new Array(7);
+console.log(x);
+x.fill(1, 3, 5);
+console.log(x);
+
+const y = Array.from({ length: 7 }, el => 1);
+console.log(y);
+const z = Array.from({ length: 7 }, (el, i) => i + 1);
+console.log(z);
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ' '))
+  );
+  console.log(movementsUI);
+});
