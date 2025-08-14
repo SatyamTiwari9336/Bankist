@@ -595,3 +595,17 @@ const swimmingAdjacent = [
 console.log(swimmingAdjacent);
 
 //6
+const dogavg10 = breeds.every(el => el.averageWeight > 10);
+console.log(dogavg10);
+
+//7
+const active = breeds.some(br => br.activities.length >= 3);
+console.log(active);
+
+//bonus
+const fetchweights = breeds
+  .filter(br => br.activities.includes('fetch'))
+  .map(br => br.averageWeight);
+console.log(fetchweights);
+const highestweight = Math.max(...fetchweights);
+console.log(highestweight);
