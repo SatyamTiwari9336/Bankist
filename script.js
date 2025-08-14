@@ -652,7 +652,6 @@ const groupedaccounts = Object.groupBy(accounts, account =>
   account.interestRate > 1 ? 'high' : 'low'
 );
 console.log(groupedaccounts);
-*/
 /////////////////////////////////////////
 
 //creating empty array
@@ -678,3 +677,18 @@ labelBalance.addEventListener('click', function () {
   );
   console.log(movementsUI);
 });
+*/
+//to make methods that are not destructive toreverse,tosplice,tosort - these dont mutate the array or object forever
+
+console.log(movements);
+const reversedMOv = movements.reverse();
+console.log(reversedMOv);
+console.log(movements); // movements changed forever
+const now = movements.toReversed(); //this doesnt change the main array
+console.log(now);
+
+//with
+const newMovements = movements.with(1, 2000);
+console.log(newMovements);
+
+console.log(movements);
