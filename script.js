@@ -569,7 +569,7 @@ const breeds = [
 ];
 //solutions
 //1.
-const huskyWeight = breeds.find(br => (br.breed = 'Husky')).averageWeight;
+const huskyWeight = breeds.find(br => br.breed === 'Husky').averageWeight;
 console.log(huskyWeight);
 //2.
 const dogBothActivities = breeds.find(el =>
@@ -581,7 +581,17 @@ console.log(`dogBothactivities is ${dogBothActivities}`);
 const allActivities = breeds.flatMap(el => el.activities);
 console.log(allActivities);
 //4.
-const uniqueActivities = new Set([...allActivities]);
+const uniqueActivities = [...new Set(allActivities)];
 console.log(uniqueActivities);
 //5.
-const swimmingAdjacent = breeds.filter();
+const swimmingAdjacent = [
+  ...new Set(
+    breeds
+      .filter(br => br.activities.includes('swimming'))
+      .flatMap(br => br.activities)
+      .filter(activities => activities !== 'swimming')
+  ),
+];
+console.log(swimmingAdjacent);
+
+//6
