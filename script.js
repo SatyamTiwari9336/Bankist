@@ -432,7 +432,8 @@ const calcAverageHumanAge = function (ages) {
 };
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
-
+////////////////////////////////////////////////////
+*/
 //chaining of methods
 
 const euroToUsd = 1.1;
@@ -492,8 +493,8 @@ console.log(Array.isArray(arr[3]));
 console.log(Array.isArray(arr[2]));
 
 //array flatening
-const arr = [[1, 2, 3], [4, 5, 3], 7, 8];
-console.log(arr.flat());
+const arr1 = [[1, 2, 3], [4, 5, 3], 7, 8];
+console.log(arr1.flat());
 const arrDeep = [[1, [3, 2, [3482], 8], 3], [4, [2, 6, 7], 5, 3], [7, 2, 5], 8];
 console.log(arrDeep.flat(2));
 console.log(arrDeep.flat(3));
@@ -515,7 +516,6 @@ const overallbalance2 = accounts
 
 console.log(overallbalance);
 
-*/
 ///////////////////////////////////////
 // Coding Challenge #4
 
