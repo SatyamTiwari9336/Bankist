@@ -432,8 +432,7 @@ const calcAverageHumanAge = function (ages) {
 };
 calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
-////////////////////////////////////////////////////
-*/
+
 //chaining of methods
 
 const euroToUsd = 1.1;
@@ -516,6 +515,7 @@ const overallbalance2 = accounts
 
 console.log(overallbalance);
 
+*/
 ///////////////////////////////////////
 // Coding Challenge #4
 
