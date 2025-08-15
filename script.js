@@ -696,3 +696,8 @@ const arr = [1, 2, 3, 4, [3, 4, [3, 4], 5]];
 const newrr = arr.flat(2);
 console.log(newrr);
 */
+//how many depostits with atleast 1000 dollars
+const val = accounts
+  .flatMap(el => el.movements)
+  .filter(el => el >= 1000).length;
+console.log(val);
