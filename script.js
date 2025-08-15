@@ -677,7 +677,6 @@ labelBalance.addEventListener('click', function () {
   );
   console.log(movementsUI);
 });
-*/
 //to make methods that are not destructive toreverse,tosplice,tosort - these dont mutate the array or object forever
 
 console.log(movements);
@@ -692,3 +691,8 @@ const newMovements = movements.with(1, 2000);
 console.log(newMovements);
 
 console.log(movements);
+
+const arr = [1, 2, 3, 4, [3, 4, [3, 4], 5]];
+const newrr = arr.flat(2);
+console.log(newrr);
+*/
