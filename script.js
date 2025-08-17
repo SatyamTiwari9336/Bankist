@@ -812,3 +812,12 @@ const sarahdog = dogs.filter(el => el.owners.includes('Sarah'));
 console.log(
   `${sarahdog.curFood > dogs.recfood ? 'overeating' : 'not overeating'}`
 );
+//3.
+const ownersTooMuch = dogs
+  .filter(el => el.curFood > el.recfood)
+  .flatMap(el => el.owners);
+console.log(`ownerstooMuch [${ownersTooMuch}]`);
+const ownersTooLittle = dogs
+  .filter(el => el.curFood < el.recfood)
+  .flatMap(el => el.owners);
+console.log(`ownerstoolittle [${ownersTooLittle}]`);
