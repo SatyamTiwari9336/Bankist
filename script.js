@@ -821,3 +821,13 @@ const ownersTooLittle = dogs
   .filter(el => el.curFood < el.recfood)
   .flatMap(el => el.owners);
 console.log(`ownerstoolittle [${ownersTooLittle}]`);
+//4
+let str = '';
+ownersTooLittle.forEach(el => (str += `${el} and `));
+str = str + "'s dogs eat too little";
+console.log(str);
+
+let str2 = '';
+ownersTooMuch.forEach(el => (str += `${el} and `));
+str = str + "'s dogs eat too little";
+console.log(str2);
