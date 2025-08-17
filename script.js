@@ -807,3 +807,8 @@ const dogs = [
 //1.
 dogs.forEach(el => (el.recfood = Math.floor(el.weight ** 0.75 * 28)), dogs);
 console.log(dogs);
+//2.
+const sarahdog = dogs.filter(el => el.owners.includes('Sarah'));
+console.log(
+  `${sarahdog.curFood > dogs.recfood ? 'overeating' : 'not overeating'}`
+);
