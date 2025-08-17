@@ -875,3 +875,6 @@ const numberowner = Object.groupBy(dogs, dog => {
 console.log(numberowner);
 
 //10.
+const newarr = dogs.flatMap(el => el.recfood);
+const sortedarr = newarr.toSorted();
+console.log(sortedarr);
