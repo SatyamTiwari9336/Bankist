@@ -850,3 +850,11 @@ const okayeatdogs = dogs.filter(
 console.log(okayeatdogs);
 
 //8
+const group = Object.groupBy(dogs, dog => {
+  if (dog.curFood > dog.recfood) {
+    return 'overeating';
+  } else if (dog.curFood < dog.recfood) {
+    return 'littleeater';
+  } else return 'exact';
+});
+console.log(group);
