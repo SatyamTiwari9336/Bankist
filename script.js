@@ -831,3 +831,10 @@ let str2 = '';
 ownersTooMuch.forEach(el => (str += `${el} and `));
 str = str + "'s dogs eat too little";
 console.log(str2);
+
+//5.
+console.log(Boolean(dogs.find(el => el.recfood == el.curFood)));
+//or
+console.log(dogs.some(el => el.recfood == el.curFood));
+
+//6.
