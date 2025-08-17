@@ -838,3 +838,15 @@ console.log(Boolean(dogs.find(el => el.recfood == el.curFood)));
 console.log(dogs.some(el => el.recfood == el.curFood));
 
 //6.
+console.log(
+  dogs.every(
+    el => el.curFood >= el.recfood * 0.9 && el.curFood <= el.recfood * 1.1
+  )
+);
+//7.
+const okayeatdogs = dogs.filter(
+  el => el.curFood >= el.recfood * 0.9 && el.curFood <= el.recfood * 1.1
+);
+console.log(okayeatdogs);
+
+//8
