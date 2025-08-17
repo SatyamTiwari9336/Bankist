@@ -858,3 +858,20 @@ const group = Object.groupBy(dogs, dog => {
   } else return 'exact';
 });
 console.log(group);
+
+//9.
+const numberowner = Object.groupBy(dogs, dog => {
+  let ownernumber = dog.owners.length;
+  if (ownernumber == 1) {
+    return 1;
+  }
+  if (ownernumber == 2) {
+    return 2;
+  }
+  if (ownernumber == 3) {
+    return 3;
+  }
+});
+console.log(numberowner);
+
+//10.
