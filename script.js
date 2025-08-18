@@ -795,8 +795,8 @@ YOUR TASKS:
 
 HINT 1: Use many different tools to solve these challenges, you can use the summary lecture to choose between them 😉
 HINT 2: Being within a range 10% above and below the recommended portion means: current > (recommended * 0.90) && current < (recommended * 1.10). Basically, the current portion should be between 90% and 110% of the recommended portion.
-*/
 
+//solutions
 const dogs = [
   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
   { weight: 8, curFood: 200, owners: ['Matilda'] },
@@ -878,3 +878,6 @@ console.log(numberowner);
 const newarr = dogs.flatMap(el => el.recfood);
 const sortedarr = newarr.toSorted();
 console.log(sortedarr);
+*/
+//git new comment
+//to check if auth is now working in local
