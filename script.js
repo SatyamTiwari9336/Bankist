@@ -795,6 +795,7 @@ YOUR TASKS:
 
 HINT 1: Use many different tools to solve these challenges, you can use the summary lecture to choose between them 😉
 HINT 2: Being within a range 10% above and below the recommended portion means: current > (recommended * 0.90) && current < (recommended * 1.10). Basically, the current portion should be between 90% and 110% of the recommended portion.
+*/
 
 //solutions
 const dogs = [
@@ -804,9 +805,10 @@ const dogs = [
   { weight: 18, curFood: 244, owners: ['Joe'] },
   { weight: 32, curFood: 340, owners: ['Michael'] },
 ];
+
 //1.
-dogs.forEach(el => (el.recfood = Math.floor(el.weight ** 0.75 * 28)), dogs);
-console.log(dogs);
+// dogs.forEach(el => (el.recfood = el.weight ** 0.75 * 28));
+// console.log(dogs);
 //2.
 const sarahdog = dogs.filter(el => el.owners.includes('Sarah'));
 console.log(
@@ -878,6 +880,14 @@ console.log(numberowner);
 const newarr = dogs.flatMap(el => el.recfood);
 const sortedarr = newarr.toSorted();
 console.log(sortedarr);
-*/
 //git new comment
 //to check if auth is now working in local
+// //create new object and store the recfood values in it
+let newarrdog = structuredClone(dogs);
+//let newarrdog = [...dogs]; // this makes change in original also if changed this copy
+console.log(newarrdog);
+
+newarrdog.forEach(el => (el.recfood = el.weight ** 0.75 * 28));
+
+// dogs.forEach(el => newarrdog.push((el.recfood = el.weight ** 0.75 * 28)));
+console.log(dogs);
