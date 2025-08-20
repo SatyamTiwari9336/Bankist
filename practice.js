@@ -188,3 +188,25 @@ console.log("Transposed Matrix:");
 for (let i = 0; i < transpose.length; i++) {
   console.log(transpose[i]);
 }
+
+//display timer on screen
+const startlogin = function () {
+  const tick = function () {
+    let min = String(Math.trunc(time / 60)).padStart(2, 0);
+    let sec = String(time % 60).padStart(2, 0);
+
+    document.querySelector(".clock").textContent = `${min}:${sec}`;
+    time--;
+    if (time == 0) {
+      clearInterval(timer);
+      document.querySelector(".clock").textContent = `my name is Satyam`;
+    }
+  };
+  let time = 20;
+  tick();
+  const timer = setInterval(() => {
+    tick();
+  }, 1000);
+};
+
+startlogin();
