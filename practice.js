@@ -250,3 +250,22 @@ for (i = 0; i <= 4; i++) {
   }
   console.log(row);
 }
+
+//pattern-4
+//     1
+//    121
+//   12321
+//  1234321
+
+function printPattern(n) {
+  for (let i = 1; i <= n; i++) {
+    const spaces = " ".repeat(n - i);
+    let left = "";
+    for (let j = 1; j <= i; j++) left += j;
+    let right = "";
+    for (let j = i - 1; j >= 1; j--) right += j;
+    console.log(spaces + left + right);
+  }
+}
+
+printPattern(4);
