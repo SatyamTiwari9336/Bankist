@@ -223,4 +223,17 @@ for (let i = 1; i <= 4; i++) {
   }
   console.log(row);
 }
-// gi
+
+//pattern
+// 1234
+// 123
+// 12
+// 1
+
+for (let i = 4; i >= 0; i--) {
+  let row = " ";
+  for (let j = 1; j <= i; j++) {
+    row = row + j;
+  }
+  console.log(row);
+}
