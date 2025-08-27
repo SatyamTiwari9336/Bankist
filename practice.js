@@ -237,3 +237,16 @@ for (let i = 4; i >= 0; i--) {
   }
   console.log(row);
 }
+//pattern-3
+// A
+// AB
+// ABC
+// ABCD
+
+for (i = 0; i <= 4; i++) {
+  let row = "";
+  for (j = 0; j < i; j++) {
+    row = row + String.fromCharCode(65 + j);
+  }
+  console.log(row);
+}
