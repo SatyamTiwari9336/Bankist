@@ -202,7 +202,7 @@ const startlogin = function () {
       document.querySelector(".clock").textContent = `my name is Satyam`;
     }
   };
-  let time = 20;
+  let time = 120;
   tick();
   const timer = setInterval(() => {
     tick();
@@ -210,3 +210,16 @@ const startlogin = function () {
 };
 
 startlogin();
+//pattern
+// 1
+// 23
+// 456
+// 78910
+let num = 1;
+for (let i = 1; i <= 4; i++) {
+  let row = "";
+  for (let j = 1; j <= i; j++) {
+    row += num++ + " ";
+  }
+  console.log(row);
+}
