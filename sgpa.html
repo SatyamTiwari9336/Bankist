@@ -1,37 +1,50 @@
-<select id="dropbox">
-    <option value="1">Semester - 1</option>
-    <option value="2">Semester - 2</option>
-</select>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="grades"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-<script>
-    // All semester data stored in JS
-    const semesterSubjects = {
-        "1": [
-            "Engineering Mathematics -1",
-            "Physics",
-            "BEE (Basic Electrical)",
-            "CS",
-            "PPS (Programming)",
-            "Engineering Physics Lab",
-            "Language Lab",
-            "Computer Programming Lab",
-            "BEE Lab",
-            "Computer Aided Engineering Graphics",
-            "SODECA"
-        ],
-        "2": [
-            "Engineering Mathematics -2",
-            "Chemistry",
-            "BME (Basic Mechanical)",
-            "Human Values",
-            "Civil"
-        ]
-    };
+<body>
 
-    // Grade options
-    const gradeOptions = `
+
+
+    <select id="dropbox">
+        <option value="1">Semester - 1</option>
+        <option value="2">Semester - 2</option>
+    </select>
+
+    <div class="grades"></div>
+
+    <script>
+        // All semester data stored in JS
+        const semesterSubjects = {
+            "1": [
+                "Engineering Mathematics -1",
+                "Physics",
+                "BEE (Basic Electrical)",
+                "CS",
+                "PPS (Programming)",
+                "Engineering Physics Lab",
+                "Language Lab",
+                "Computer Programming Lab",
+                "BEE Lab",
+                "Computer Aided Engineering Graphics",
+                "SODECA"
+            ],
+            "2": [
+                "Engineering Mathematics -2",
+                "Chemistry",
+                "BME (Basic Mechanical)",
+                "Human Values",
+                "Civil"
+            ]
+        };
+
+        // Grade options
+        const gradeOptions = `
     <option value="10">A++</option>
     <option value="9">A+</option>
     <option value="8.5">A</option>
@@ -46,29 +59,33 @@
     <option value="0">F</option>
   `;
 
-    // Function to create subject + dropdown
-    function createSubjects(semester) {
-        const container = document.querySelector(".grades");
-        container.innerHTML = ""; // clear previous
+        // Function to create subject + dropdown
+        function createSubjects(semester) {
+            const container = document.querySelector(".grades");
+            container.innerHTML = ""; // clear previous
 
-        const subjects = semesterSubjects[semester] || [];
+            const subjects = semesterSubjects[semester] || [];
 
-        subjects.forEach((subject, i) => {
-            const section = document.createElement("section");
-            section.className = `grades${i + 1}`;
-            section.innerHTML = `
+            subjects.forEach((subject, i) => {
+                const section = document.createElement("section");
+                section.className = `grades${i + 1}`;
+                section.innerHTML = `
         ${subject}
         <select id="dropbox${i + 1}">
           ${gradeOptions}
         </select>
       `;
-            container.appendChild(section);
+                container.appendChild(section);
+            });
+        }
+
+        // Event listener for dropdown change
+        document.getElementById("dropbox").addEventListener("change", function () {
+            createSubjects(this.value);
         });
-    }
 
-    // Event listener for dropdown change
-    document.getElementById("dropbox").addEventListener("change", function () {
-        createSubjects(this.value);
-    });
+    </script>
+    <script src="new.js"></script>
+</body>
 
-</script>
+</html>
