@@ -19,3 +19,17 @@ function reverseNumber(num) {
 }
 
 reverseNumber(13289);
+//print pattern
+//hollow square
+
+for (let i = 0; i < 5; i++) {
+  let row = "";
+  for (let j = 0; j < 5; j++) {
+    if (i === 0 || i === 4 || j === 0 || j === 4) {
+      row += "*";
+    } else {
+      row += " ";
+    }
+  }
+  console.log(row);
+}
