@@ -1,12 +1,10 @@
-const ispalindrome = function (num) {
-  const str = num.toString();
+const reversestring = function (str) {
   const reversed = str.split("").reverse().join("");
   console.log(reversed);
-  console.log(reversed == str);
 };
 
-ispalindrome(112);
-ispalindrome(121);
+reversestring("satyam");
+// ispalindrome(121);
 
 function reverseNumber(num) {
   let newnum = 0;
